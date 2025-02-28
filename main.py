@@ -10,7 +10,7 @@ def send_invitations(guests_list):
   
  
 # Greet the user
-print("Welcome to the dinner inviting porgram! ")
+print("Welcome to the dinner inviting program! ")
 
 
 
@@ -26,7 +26,10 @@ guests =
 
 # Ask for the names of the people 
 for i in range(num_guests):
-    
+    try:
+        name = input(f"Enter the name of the guest {i+1}: ")
+        except error 
+        
 
 
 
