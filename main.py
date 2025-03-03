@@ -38,24 +38,49 @@ for i in range(num_guests):
             else:
                 print("Name cannot be empty. Please evter a valid name. ")
         except EOFError:
-            print("Input is not available")
+            print("Invalid input! ")
             name = f"Guest{i+1}"
             guests.append(name)
             break
 
 # Print a letter for each of them 
-
-
-
+send_invitations(guests)
 
 # Ask the user if they want to add or remove anyone from the invitation
+while True:
+    try:
+        replace = input("Do you want to replace a guest? [yes/no] ").strip().lower()
+        if replace in ["yes", "no"]:
+            break
+        else:
+            print("Invalid input! Please enter 'yes or 'no' ")
+    except EOFError:
+        print("Invalid input! ") 
+        replace = 'no'
+        break
+
+# replace a guest if the user wants to
+if replace == "yes":
+    while True:
+        try:
+            old_guest = input("Enter the name of the huest to replace: ").strip()
+            if old_guest in guests:
+                new_guest = input("Enter the name of the new guest: ").strip()
+                if new_guest:
+                    guests[guests.index(old_guest)] = new_guest #this replaces the old guest with the old one.
+                    break
+                else:
+                    print("New guest name cannot be empty. Try again. ")
+            else:
+                print(f"{old_guest} is not in the guest list. Try again. ")
+        except EOFError:
+            print("Input is not available. ")
+            break
+        
 
 
 
 
-# Print the new letter for the user
 
 
 
-
-# 
