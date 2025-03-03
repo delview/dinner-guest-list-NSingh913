@@ -76,7 +76,12 @@ if replace == "yes":
         except EOFError:
             print("Input is not available. ")
             break
-        
+
+# list the guests invitation in alphabetic order
+guests.sort()
+send_invitations(guests)
+
+
 
 
 
