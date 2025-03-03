@@ -1,14 +1,15 @@
 # This lists will invite 6 pepole to dinner and of them would not be able to make it so also need to send request to someone else
 
-
 # Create a function to print invitations 
 def send_invitations(guests_list):
 
-    """Prints personalized invitation messages for each guests."""
+    """
+    Prints personalized invitation messages for each guests.
+    """
 
     print("\nDinner Invitations: ")
     for guest in guests_list:
-        print(f"Dear {guest}, you are invited to the dinner party! ")
+        print(f"Dear {guest}, you are invited to the dinner party on 5 march at Tandoori Flame, Scott rd at 9pm! ")
 
 # Greet the user
 print("Welcome to the dinner inviting program! ")
@@ -31,7 +32,7 @@ guests = []
 for i in range(num_guests):
     while True:
         try:
-            name = input(f"Enter the name of guests {i+1}: ").strip()
+            name = input(f"Enter the name of guests {i+1}: ").strip().title()
             if name:
                 guests.append(name) # this is to append the guests name
                 break
@@ -63,11 +64,11 @@ while True:
 if replace == "yes":
     while True:
         try:
-            old_guest = input("Enter the name of the huest to replace: ").strip()
+            old_guest = input("Enter the name of the guest to replace: ").strip().title()
             if old_guest in guests:
-                new_guest = input("Enter the name of the new guest: ").strip()
+                new_guest = input("Enter the name of the new guest: ").strip().title()
                 if new_guest:
-                    guests[guests.index(old_guest)] = new_guest #this replaces the old guest with the old one.
+                    guests[guests.index(old_guest)] = new_guest # this replaces the old guest with the old one.
                     break
                 else:
                     print("New guest name cannot be empty. Try again. ")
