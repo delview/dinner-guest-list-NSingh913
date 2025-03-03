@@ -81,6 +81,8 @@ if replace == "yes":
 guests.sort()
 send_invitations(guests)
 
+# print the total number of the guests.
+print(f"Total number of the guests invited: {len(guests)}")
 
 
 
