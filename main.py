@@ -17,22 +17,31 @@ print("Welcome to the dinner inviting program! ")
 while True:
     try:
         num_guests = int(input("How many people do you want to invite to the dinner party?: "))
-        except error:
-        print("Error input noe available only 6 guests per time allowed! ")
-        num_guests = 6
+        if num_guests > 0:
+            break
+        else:
+            print("Please enter the number of the people who you want to invite. ")
+    expect ValueError:
+        print("Invalid input. Please enter a valid number. ")
+    
+# list for the names of the guests.
+guests = [] 
 
-guests = 
-
-
-
-# Ask for the names of the people 
+# loop for the guest names
 for i in range(num_guests):
-    try:
-        name = input(f"Enter the name of the guest {i+1}: ")
-        except error 
-        
-
-
+    while True:
+        try:
+            name = input(f"Enter the name of guests {i+1}: ").strip()
+            if name:
+                guests.append(name) # this is to append the guests name
+                break
+            else:
+                print("Name cannot be empty. Please evter a valid name. ")
+        except EOFError:
+            print("Input is not available")
+            name = f"Guest{i+1}"
+            guests.append(name)
+            break
 
 # Print a letter for each of them 
 
