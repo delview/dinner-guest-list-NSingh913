@@ -84,6 +84,9 @@ send_invitations(guests)
 # print the total number of the guests.
 print(f"Total number of the guests invited: {len(guests)}")
 
+# Say goodbye to the user
+print("\nThank you for using Dinner invitor! Have a great day. ")
+
 
 
 
