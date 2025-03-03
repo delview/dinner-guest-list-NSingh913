@@ -21,7 +21,7 @@ while True:
             break
         else:
             print("Please enter the number of the people who you want to invite. ")
-    expect ValueError:
+    except ValueError:
         print("Invalid input. Please enter a valid number. ")
     
 # list for the names of the guests.
